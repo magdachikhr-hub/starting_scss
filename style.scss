@@ -1,5 +1,16 @@
 @import "./variables";
 
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin main_title {
+  color: $primary_Color;
+  font-size: $basic_font;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +28,7 @@ main {
   height: 100px;
   width: 300px;
   background-color: blueviolet;
+  @include flex;
 
   button {
     background-color: $primary_Color;
@@ -51,4 +63,5 @@ main {
 footer {
   height: 200px;
   background-color: $primary_Color;
+  @include flex;
 }
