@@ -1,8 +1,4 @@
-$primary_Color: pink;
-$basic_font: 16px;
-$header_font: 28;
-$white: #ffff;
-$black: #000;
+@import "./variables";
 
 * {
   margin: 0;
@@ -23,8 +19,32 @@ main {
   background-color: blueviolet;
 
   button {
-    color: $primary_Color;
+    background-color: $primary_Color;
     font-size: 16px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    color: $text-color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $text-color;
+      color: $primary_Color;
+    }
+    &::after {
+      content: "hiiiiii";
+      padding: 50px;
+      background-color: yellowgreen;
+      display: none;
+      position: absolute;
+      color: $white;
+      left: 20px;
+      top: 30px;
+    }
+
+    &:hover::after {
+      display: inline-block;
+    }
   }
 }
 
